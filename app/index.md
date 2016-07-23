@@ -57,7 +57,7 @@ block code
 
 | hh:mm | hh:mm | hh:mm | hh:mm |
 |:-----------|:-----------|:-----------|:-----------|
-| 発表開始 | 質疑応答 | 懇親会 | 完全撤収 |
+| 発表開始 | 質疑応答 | ![](./images/sushi.png) 懇親会 ![](./images/beer.png) | 完全撤収 |
 
 ---
 
@@ -98,6 +98,14 @@ block code
 - フロントエンドコーディング
 - 広告マーケティング
 
+--
+
+```
+＿人人人人人人人人人人人人人人人人＿
+＞　人が足りないから来てください　＜
+￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
+```
+
 ---
 
 ## アジェンダ
@@ -107,7 +115,7 @@ block code
 - \#3 HRMOSを支える技術
 - \#4 チームマネジメント
 - \#5 質疑応答
-- \#6 懇親会
+- \#6 懇親会 ![](./images/sushi.png) ![](./images/beer.png)
 
 ---
 
@@ -343,11 +351,17 @@ block code
 
 --
 
-||||
-|:-----------:|:-----------:|:-----------:|
-|1|2|3|
-|4|5|6|
-|7|8|9|
+```
+//
+
+            1             2             3
+
+            4             5             6
+
+            7             8             9
+
+//
+```
 
 ---
 
@@ -426,7 +440,7 @@ block code
 
 --
 
-1. 認知・改変が容易で、サーバサイドとの親和性がある
+1. 認知・改変が容易で、サーバサイドとの親和性があること
 1. コンポーネント化による重複の排除
 1. 基礎構造・部分構造の分割
 1. セレクタの構造化
@@ -436,7 +450,41 @@ block code
 
 ## 認知・改変が容易？サーバサイドとの親和性？
 
-<!-- 何か具体的な例を示す -->
+--
+
+- 認知 => コードからUIが想像できること
+
+--
+
+```
+<div>
+  <div>
+    <div>
+      (´･_･`)
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## 認知・改変が容易？サーバサイドとの親和性？
+
+- 改変 => ひとつの修正で複数が崩れる、または他の箇所の修正が漏れるということがないように
+
+--
+
+  - コンポーネント化（後述）
+
+---
+
+## 認知・改変が容易？サーバサイドとの親和性？
+
+- サーバサイドとの親和性 => 受け取ったJSONをforEachするだけ、みたいな
+
+--
+
+  - データを受け取って画面に表示するときの効率を考慮する
 
 ---
 
@@ -456,7 +504,7 @@ block code
 ## 例：
 
 ```
-- base/
+▼ base/
   - config/
   - constants/
   - components/
@@ -469,10 +517,10 @@ block code
 ## 例：
 
 ```
-- base/
+▼ base/
   - config/
   - constants/
-  - components/
+  ▼ components/
     - header.html.tpl
     - _header.scss
     - footer.html.tpl
@@ -488,9 +536,9 @@ block code
 ## 例：
 
 ```
-- base/
+▼ base/
   - config/
-  - constants/
+  ▼ constants/
     - constants.ts // 定数（後述）
     - enums.ts // Enum（後述）
   - components/
@@ -504,7 +552,7 @@ block code
 
 ```
 - base/
-- app/
+▼ app/
   - login/
   - dashboard/
   - applications/
@@ -517,8 +565,8 @@ block code
 
 ```
 - base/
-- app/
-  - login/
+▼ app/
+  ▼ login/
     - index.html.tpl
     - _login-index.scss
     - _login-index.ts
@@ -526,6 +574,10 @@ block code
   - applications/
   - jobs/
 ```
+
+---
+
+## 共通構造と非共通構造は排他的に管理できるのか？
 
 ---
 
@@ -565,7 +617,7 @@ block code
 ## 基礎構造・部分構造の例：
 
 ```
-<section class="sg-container"> // <- 基礎となるcontainer
+<section class="sg-container"> <- 基礎となるcontainer
   <h2>見出し</h2>
   <p>見出しを補足するテキスト</p>
   <div>
@@ -589,7 +641,7 @@ block code
 
 ```
 
-.sg-container + .sg-container { }
+.sg-container + * { }
 ```
 
 --
@@ -604,7 +656,7 @@ block code
 ## 基礎構造・部分構造の例：
 
 ```
-<section class="sg-container"> // <- 基礎となるcontainer
+<section class="sg-container"> <- 基礎となるcontainer
   <h2>見出し</h2>
   <p>見出しを補足するテキスト</p>
   <div>
@@ -625,7 +677,7 @@ block code
   <h2>見出し</h2>
   <p>見出しを補足するテキスト</p>
   <div>
-    <figure class="pg-inner-images"> // <- 部分的に追加した構造
+    <figure class="pg-inner-images"> <- 部分追加した構造
       <img src="hoge.jpg">
     </figure>
     <p>本文テキスト</p>
@@ -685,7 +737,6 @@ block code
 ## セレクタの構造化？
 
 ```
-// すっきりした！
 <ul class="sg-item-list">
   <li></li>
   <li></li>
@@ -693,6 +744,8 @@ block code
 </ul>
 
 .sg-item-list > li { }
+
+^ すっきりした！
 ```
 
 ---
@@ -709,7 +762,9 @@ block code
 
 --
 
+```
 ^ クラスが意味を持っていない。「なぜ？」がわからない。
+```
 
 ---
 
@@ -760,8 +815,14 @@ block code
 
 ```
 
-<button class="jsc-conversion-trigger">問い合わせ</button>
+<button class="jsc-cta-trigger">問い合わせ</button>
 ```
+
+---
+
+## コードレビューによる品質担保
+
+![](./images/review.jpg)
 
 ---
 
@@ -790,6 +851,10 @@ block code
 --
 
 HRMOSの半分はTODOでできています
+
+--
+
+![](./images/bufferin.png)
 
 ---
 
@@ -821,6 +886,14 @@ HRMOSの半分はTODOでできています
 ## 文芸的プログラミング
 
 https://ja.wikipedia.org/wiki/文芸的プログラミング
+
+---
+
+## TODOやNOTEはweeklyで管理
+
+--
+
+- 管理？（後述）
 
 ---
 
@@ -858,14 +931,27 @@ let foo: boolean = false;
 
 ---
 
+## 扱う値を開発中に厳密に管理
+
+- String
+- Boolean
+- Number
+- Date
+- Object
+- など
+
+---
+
 ## 型だけじゃなく、中身もあらかじめ定義しちゃおう
 
+--
+
 ```
-- base/
+▼ base/
   - config/
-  - constants/
-    - constants.ts // <- ここ
-    - enums.ts     // <- ここ
+  ▼ constants/
+    - constants.ts <- ここ
+    - enums.ts     <- ここ
   - components/
   - helpers/
 - app/
@@ -881,6 +967,7 @@ let foo: boolean = false;
 const Constants = {
   SERVICE_NAME = 'HRMOS[ハーモス]';
   COMPANY_NAME = '株式会社ビズリーチ';
+  ROOT_URL     = 'https://www.hrmos.co/';
 }
 ```
 
@@ -902,12 +989,14 @@ const Constants = {
 
 ## Enumによる定数配列の定義（例）
 
+--
+
 ```
 class Roles {
-  General        = { code: 'GEN', name: '一般社員', limited: false };
-  Interviewer    = { code: 'INT', name: '面接官',   limited: false };
-  Recruiter      = { code: 'REC', name: '人事部',   limited: true };
-  Administrator  = { code: 'ADM', name: '管理者',   limited: true };
+  General = { code: 'GEN', name: '一般社員', limited: false };
+  Interviewer = { code: 'INT', name: '面接官', limited: false };
+  Recruiter = { code: 'REC', name: '人事部', limited: true };
+  Administrator = { code: 'ADM', name: '管理者', limited: true };
 }
 ```
 
@@ -927,13 +1016,14 @@ class Roles {
 
 ```
 this.role: string = 'INT';
-```
 
 ↑ こんなデータが渡されてきたら...
+```
 
 --
 
 ```
+
 <p>あなたの権限は{{ $enums.roles.valueOf(this.role).name }}です<p>
 
   => <p>あなたの権限は面接官です<p>
@@ -970,6 +1060,26 @@ this.role: string = 'INT';
   - 使ってないのに定義してる変数が増えていないか
   - あっちとこっちに同じプロパティのスタイルを定義していないか
 
+--
+
+- cf: npm gulp-htmllint, gulp-sasslint, gulp-tslint, etc...
+
+---
+
+## ついでにTODOコメントの進捗状況も
+
+--
+
+```
+- AさんはTODOが 25(+4) 個ありますよー (´･_･`)
+- BさんはTODOが 39(-12) 個ありますよー o(^▽^)o
+- PJ内には全部で 403(-22) 個のTODOがありますよー o(^▽^)o
+```
+
+--
+
+- cf: npm gulp-todo
+
 ---
 
 ## ユーザ操作によるエラーログ抽出
@@ -1000,9 +1110,107 @@ this.role: string = 'INT';
 
 ---
 
+# \#4 チームマネジメント
 
+---
 
+## デザイナとフロントエンドエンジニアの関係
 
+--
 
+- あってはいけないこと
 
-<!-- ## 例：
+--
+
+1. デザイナーが実装可能性を気にすること
+1. デザイナーが把握していないデザインが勝手に実装されること
+1. デザイナーの意図が捻じ曲げられること
+
+---
+
+## デザイナが実装可能性を気にすること
+
+--
+
+- (´･\_･\`)「これって技術的にできるのかなあ...」
+
+--
+
+  - 実装可能性はフロントエンドエンジニアの力量の問題であり、デザイナにフィージビリティを考えさせてはいけない。
+  - デザイナも、フロントの工数や実装の複雑さを考慮することがあってはいけない。
+
+---
+
+## デザイナが把握していないデザインが実装されること
+
+--
+
+- （\*＾▽゜）「時間無いから直接コード書きながらデザイン考えたろ」
+
+--
+
+  - 直接コードを書く => コードの癖やその人が得意な実装がデザインに反映される
+
+---
+
+## デザイナの意図が捻じ曲げられること
+
+--
+
+- 彡(゜)(゜)「ここのpaddingってたぶん10pxやろ」
+
+--
+
+  - フロントエンドエンジニアはデザインの _意図_ を理解して _正解_ の実装をしなければいけない
+
+---
+
+## 日々の仕事上のコミュニケーション
+
+--
+
+- （\*＾▽゜）「リファクタしたよ」 => ![](./images/+1.png)
+
+--
+
+- （\*＾▽゜）「なんか気になったから直したよ」 => ![](./images/+1.png)
+
+--
+
+- （\*＾▽゜）「もっと短い書き方あったよ」 => ![](./images/+1.png)
+
+--
+
+- （\*＾▽゜）「暇つぶしにバナー作ったよ」 => ![](./images/+1.png)
+
+--
+
+- （\*＾▽゜）「タスクをアサインしといたよ」 => ![](./images/neutral.png)
+
+---
+
+## 日々の仕事上のコミュニケーション
+
+- お互いフラットに意見が言える環境であること
+- 日々頻繁に、手軽にチャットができること
+  - これらは、 _デザイナ同士_ 、_フロントエンドエンジニア同士_ でも同じことがいえる
+
+---
+
+## 最後に
+
+![](./images/design.png)
+
+---
+
+## ご参加いただきありがとうございました。
+
+- 懇親会について
+
+![](./images/event.jpg)
+
+---
+
+class: center, middle
+
+# *intentionally left blank*

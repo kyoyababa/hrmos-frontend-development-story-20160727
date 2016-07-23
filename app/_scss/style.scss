@@ -68,7 +68,17 @@ h1,h2,h3 {
   }
 
   img {
+    vertical-align: middle;
+  }
+
+  p > img {
     width: 100%;
+  }
+
+  li > p > img,
+  li > img {
+    width: auto;
+    height: 2em;
   }
 
   ul,

@@ -1,5 +1,5 @@
 {
-  "name": "presentation-20160131",
+  "name": "presentation-20160723",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,14 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://kyoyababa@bitbucket.org/kyoyababa/presentation-20160131.git"
+    "url": "git+https://kyoyababa@bitbucket.org/kyoyababa/presentation-20160723.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/kyoyababa/presentation-20160131#readme",
+  "homepage": "https://bitbucket.org/kyoyababa/presentation-20160723",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
     "gulp-cssmin": "^0.1.7",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.1.1",
