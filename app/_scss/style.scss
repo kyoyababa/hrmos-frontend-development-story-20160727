@@ -29,6 +29,11 @@ h1,h2,h3 {
   background-color: $dark;
   box-shadow: none;
   -webkit-box-shadow: none;
+  * {
+    opacity: 1 !important;
+    bottom: 25px;
+    color: #EEEEEE;
+  }
 }
 
 .remark-slide-content {
@@ -36,15 +41,69 @@ h1,h2,h3 {
   color: $light;
 
   h1 {
+    margin-left: -20px;
+    padding-left: 10px;
+    border-left: 10px solid lighten(#1E4D78, 20%);
     font-size: 48px;
   }
 
   h2 {
+    margin-left: -15px;
+    padding-left: 10px;
+    border-left: 5px solid lighten(#1E4D78, 20%);
     font-size: 38px;
   }
 
   h3 {
-    font-size: 28px;
+    font-size: 30px;
+  }
+
+  h1 + *,
+  h2 + * {
+    margin-top: 10px;
+  }
+
+  * + h2 {
+    margin-top: 30px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  ul,
+  ol {
+    margin-left: 20px;
+    font-size: 24px;
+  }
+
+  table {
+    width: 100%;
+    * {
+      font-size: 26px;
+    }
+    td > img {
+      overflow: hidden;
+      max-width: 160px;
+      border-radius: 10px;
+    }
+  }
+
+  p {
+    font-size: 26px;
+  }
+
+  p > code,
+  pre > code > div {
+    padding: 4px 20px;
+    background-color: #212121;
+    font-family: Consolas;
+    font-size: 26px;
+  }
+
+  p > code,
+  pre > code {
+    margin-top: 10px;
   }
 }
 
@@ -77,7 +136,7 @@ h1,h2,h3 {
   padding: 6px 8px;
   background-color: rgba(lighten(darken(#DC0000, 50%), 50%), 0.85);
   font-size: 34px;
-  color: #CCCCCC;
+  color: #EEEEEE;
 }
 
 // slides detail

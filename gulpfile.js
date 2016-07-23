@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var webserver = require('gulp-webserver');
 var plumber = require("gulp-plumber");
 var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
 var cssmin  = require( 'gulp-cssmin' );
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
@@ -16,7 +15,6 @@ gulp.task("sass", function() {
   gulp.src("./app/_scss/**/*scss")
     .pipe(plumber())
     .pipe(sass())
-    .pipe(autoprefixer())
     .pipe(gulp.dest("./app/styles"));
 });
 
