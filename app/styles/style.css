@@ -47,8 +47,12 @@ h1, h2, h3 {
   .remark-slide-content img {
     vertical-align: middle; }
   .remark-slide-content p > img {
-    width: 100%;
-    height: auto; }
+    display: block;
+    width: auto;
+    height: calc(100vh - 100px);
+    margin: 0 auto; }
+  .remark-slide-content * + p > img {
+    height: calc(100vh - 200px); }
   .remark-slide-content li > p > img,
   .remark-slide-content li > img {
     width: auto;
