@@ -11,38 +11,6 @@ class: img-slide
 
 ---
 
-# this is h1
-
-## this is h2
-
-- list-item
-- list-item
-- list-item
-  - list-item
-  - list-item
-  - list-item
-
----
-
-1. ordered-list-item
-1. ordered-list-item
-1. ordered-list-item
-  1. ordered-list-item
-  1. ordered-list-item
-  1. ordered-list-item
-
-| Left align | Right align | Center align |
-|:-----------|------------:|:------------:|
-| This       |        This |     This     |
-
-`inline code`
-
-```
-block code
-```
-
----
-
 ## wi-fi
 
 | SSID | Password |
@@ -55,29 +23,27 @@ block code
 
 ## スケジュール
 
-| hh:mm | hh:mm | hh:mm | hh:mm |
+<!-- TODO: 当日調整して書き換えること -->
+| 19:30 | 20:20 | 20:30 | 22:00 |
 |:-----------|:-----------|:-----------|:-----------|
-| 発表開始 | 質疑応答 | ![](./images/sushi.png) 懇親会 ![](./images/beer.png) | 完全撤収 |
+| 発表開始 | 質疑応答 | ![](./images/beer.png)![](./images/sushi.png)  | 完全撤収 |
 
 ---
-
-# プロフィール
 
 ## Kyoya BABA
 
 - 28
 - 札幌
-- 経歴
-  - 2010 エディトリアルマネージャー
-  - 2011 プロジェクトマネージャー
-  - 2012 マーケティングマネージャー
-  - 2013 ウェブデザイナー
-  - 2014 フリーランス
-  - 2015 フロントエンドエンジニア <- 今ここ
+- 2010 エディトリアルマネージャー
+- 2011 プロジェクトマネージャー
+- 2012 マーケティングマネージャー
+- 2013 ウェブデザイナー
+- 2014 フリーランス
+- 2015 フロントエンドエンジニア <- 今ここ
 
 ---
 
-## SNSやってます
+## SNS
 
 | Facebook | Twitter | LinkedIn |
 |:-----------:|:-----------:|:-----------:|
@@ -87,7 +53,7 @@ block code
 
 ---
 
-## 現在
+## Kyoya BABA
 
 ### 株式会社ビズリーチHRMOS事業部
 ### フロントエンドエンジニア
@@ -108,6 +74,20 @@ block code
 
 ---
 
+## Masahiko ASAI
+
+<!-- TODO: -->
+- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+---
+
+## Masahiko ASAI
+
+<!-- TODO: -->
+- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+---
+
 ## アジェンダ
 
 - \#1 プロダクトについて
@@ -115,7 +95,7 @@ block code
 - \#3 HRMOSを支える技術
 - \#4 チームマネジメント
 - \#5 質疑応答
-- \#6 懇親会 ![](./images/sushi.png) ![](./images/beer.png)
+- \#6 ![](./images/sushi.png) ![](./images/beer.png)
 
 ---
 
@@ -187,11 +167,21 @@ block code
 
 ---
 
+## ごくごく簡単なデモ
+
+<!-- NOTE: 本番のデータが変ではない選考管理画面で、履歴書を編集したり面接を設定したりしてみる -->
+
+---
+
 ![](./images/hrmos-roi.png)
+
+<!-- NOTE: 人工知能やで〜 -->
 
 ---
 
 ## 技術スタック
+
+<!-- NOTE: 聴衆が比較的技術寄りの人間だと思うので、先に技術スタックの話をする。こういうツール使って作ってるんだよということを先に知ってもらってから、具体的な話をしたほうが理解してもらえる＆心の準備ができるのでは -->
 
 ---
 
@@ -249,6 +239,8 @@ block code
 
 ![](./images/react.jpg)
 
+<!-- NOTE: Reactについて話を振られても答えられないので、具体的な話はしない。状況に応じて最適なツールを使うという理念のもと、現在の選考管理ではAngularJS、今後の別のプロジェクトではReactで使っていく予定があるという程度の話だけする。先述したRegionUpという事業ではReactを使っているという話ならしてもいいかも？ -->
+
 ---
 
 ![](./images/jquery.jpg)
@@ -256,6 +248,7 @@ block code
 ---
 
 ![](./images/gulp.jpg)
+
 ---
 
 ![](./images/mustache.png)
@@ -309,15 +302,17 @@ block code
   - Mailgun
   - etc...
 
----
-
-# \#2 フロントエンド開発のルールづくり
+<!-- NOTE: いっぱいあるけどひとつもよくわからんという談笑スライド -->
 
 ---
 
 # \#2 フロントエンド開発のルールづくり
 
-ルールって何？
+---
+
+# \#2 フロントエンド開発のルールづくり
+
+そもそも _ルール_ って何？
 
 ---
 
@@ -362,6 +357,8 @@ block code
 
 //
 ```
+
+<!-- NOTE: for浅井さん => 竹内さんの考えなのか、世間的に言われていることなのか知らないが僕は面接でこれを言われた。 -->
 
 ---
 
@@ -452,7 +449,7 @@ block code
 
 --
 
-- 認知 => コードからUIが想像できること
+- _認知_ => コードからUIが想像できること
 
 --
 
@@ -470,7 +467,7 @@ block code
 
 ## 認知・改変が容易？サーバサイドとの親和性？
 
-- 改変 => ひとつの修正で複数が崩れる、または他の箇所の修正が漏れるということがないように
+- _改変_ => ひとつの修正で複数が崩れる、または他の箇所の修正が漏れることがないように（効率的に）画面に手を加えること
 
 --
 
@@ -485,6 +482,9 @@ block code
 --
 
   - データを受け取って画面に表示するときの効率を考慮する
+
+<!-- NOTE: フロントとサーバーが仲わるいプロジェクトチームってよくあるけど、僕らはお互いにコミュニケーションをとりあってアジャイル開発をしています。フロントエンドで必要なデータをサーバーサイドエンジニアに伝えて渡してもらう。サーバーサイドでどうしても対応が難しい簡略化はフロントエンドでデータを整理して画面に反映する。
+-->
 
 ---
 
@@ -530,6 +530,8 @@ block code
   - helpers/
 - app/
 ```
+
+<!-- NOTE: 関係するファイルは同じところにあるので、何度も同じフォルダを行き来したりする必要はないよ。headerだけいじるぞーっていう人はここのheaderのhtmlとcss（ある場合はjavascriptのファイル）だけをひたすらいじれば仕事ができるから、他の開発者と衝突することはないよ。 -->
 
 ---
 
@@ -579,6 +581,8 @@ block code
 
 ## 共通構造と非共通構造は排他的に管理できるのか？
 
+<!-- NOTE: とはいえ、実際にウェブのコーディングをしていると、こことあそこで同じクラスを使っていたり、こっちを変えるとこっちを変えたり、ここを消したらここのmarginがなくなっちゃたり。。。みたいなことが起こる。そういうトラブルがなく、各構造ごとに排他的に処理ができるようにするために、僕らは何をしているのか。 -->
+
 ---
 
 ## 基礎構造・部分構造の分割
@@ -587,6 +591,8 @@ block code
 
 - sgクラス
 - pgクラス
+
+<!-- NOTE: これはHRMOSというわけではなく、弊社全体で適用しているルールですが -->
 
 ---
 
@@ -649,23 +655,6 @@ block code
 ```
 
 .sg-container > h2 { }
-```
-
----
-
-## 基礎構造・部分構造の例：
-
-```
-<section class="sg-container"> <- 基礎となるcontainer
-  <h2>見出し</h2>
-  <p>見出しを補足するテキスト</p>
-  <div>
-    <figure>
-      <img src="hoge.jpg">
-    </figure>
-    <p>本文テキスト</p>
-  </div>
-</section>
 ```
 
 ---
@@ -748,6 +737,8 @@ block code
 ^ すっきりした！
 ```
 
+<!-- NOTE: CSSだけを見ると長くなった感じがしますが、sg-itemというのがなんのitemなのかという「認知」の観点からリスト要素を包含する親要素なんだ、ということが感覚的にわかるようになります。また、仮にリスト要素が100個とかになったときに、DOM上に大量のclassがレンダリングされるということがなくなります。 -->
+
 ---
 
 ## セレクタの構造化？
@@ -760,11 +751,15 @@ block code
 </div>
 ```
 
+<!-- NOTE: 昔こういうのあったよねー -->
+
 --
 
 ```
 ^ クラスが意味を持っていない。「なぜ？」がわからない。
 ```
+
+<!-- NOTE: クラスは名前空間を定義するものであり、どんなスタイルを適用するかを示すものではない。マージンをつけたいときにマージンというクラスをつけるのであれば、どういう状況でどういう状態のときにマージンをつけるのかという指針も見えないし、なぜ５なのかということも判断できない。デザイナーが考えたコンセプトを形にする上で、表面的な見た目の特徴を命名規則として使ってしまうことは愚かである。 -->
 
 ---
 
@@ -818,6 +813,8 @@ block code
 <button class="jsc-cta-trigger">問い合わせ</button>
 ```
 
+<!-- NOTE: 複数のときはクラスもつけるけど、スタイルではないからjs-classであることを示すよー -->
+
 ---
 
 ## コードレビューによる品質担保
@@ -828,13 +825,19 @@ block code
 
 ## コードレビューによる品質担保
 
+<!-- NOTE: 先ほどお伝えしたこととかぶりますが、以下のようなことを紹介しました -->
+
 --
 
 - _正解_ かどうか（考え方が合っているか）の確認
 
+<!-- NOTE: お互いのコードを見て、なぜこういう作り方にしたのか。このほうが情報設計の意図にあっているのではないか。このほうが見た目がシンプルじゃないか、という議論を交わします -->
+
 --
 
 - 責任の共有
+
+<!-- NOTE: さらに、レビュアーがOKを出すということは、他人のコードやプログラムの責任を共有するということになる。「ほかの人が作ったページのことなんて知らない」という個人プレーには決してならない。 -->
 
 --
 
@@ -845,6 +848,8 @@ block code
 - TODOの整理
 
 ---
+
+<!-- NOTE: ここから浅井さんにバトンタッチかなあ？ -->
 
 ## TODOといえば
 
@@ -885,15 +890,79 @@ HRMOSの半分はTODOでできています
 
 ## 文芸的プログラミング
 
-https://ja.wikipedia.org/wiki/文芸的プログラミング
+- https://ja.wikipedia.org/wiki/文芸的プログラミング
+
+<!-- NOTE: 我々はとにかく大量のコメントを入れる主義。ドキュメントをワードやエクセルで作っても誰も見ない。というか自分もそれを開くのめんどくさい。コードを修正したり確認したりするときにいっしょに仕様が確認できるのが一番楽である。ちなみに、コードはコンパイルされてなくなる。 -->
+
+---
+
+## コードを書く = 仕様書を作る
+
+--
+
+- gulp-styledocco
+- gulp-ngDoc
+
+---
+
+## コードを書く = 仕様書を作る
+
+```
+// # ボタン
+// ## 優先度により補助クラスを指定
+// '''
+// <a href="#" class="sg-button">通常のボタン</a>
+// <a href="#" class="sg-button primary">プライマリアクション</a>
+// '''
+.sg-button {
+  ...
+  &.primary {
+    ...
+  }
+}
+```
+
+---
+
+## コードを書く = 仕様書を作る
+
+![](./images/styledocco.png)
+
+---
+
+## コードを書く = 仕様書を作る
+
+- AngularJSのカスタムディレクティブ
+
+```
+/**
+ * @ngdoc directive
+ * @example
+    <example module="sampleElemExample" deps="" animate="false">
+      <file name="index.html"><sample-elem></sample-elem></file>
+      <file name="main.js">angular.module('sampleElemExample', ['exampleOfGeneratorNgdoc']);</file>
+    </example>
+ **/
+angular.module('exampleOfGeneratorNgdoc').directive('sampleElem', function () {
+  return {
+    restrict: 'E',
+    template: '<div class="sample-awesome">Hello, AngularJS directive!</div>'
+  };
+});
+```
+quo: http://qiita.com/Quramy/items/42418def7c8e6544a415
 
 ---
 
 ## TODOやNOTEはweeklyで管理
 
+<!-- NOTE: 上述したようなコメントは、ただ増えていくだけだと結局ゴミの山になるので、管理が必要です。 -->
+
 --
 
 - 管理？（後述）
+
+<!-- NOTE: 具体的な「管理＝マネジメント」をどのようにしているかについては後述します -->
 
 ---
 
@@ -901,9 +970,141 @@ https://ja.wikipedia.org/wiki/文芸的プログラミング
 
 --
 
+1. ES6(ES2015)によるJavaScriptコーディング
 1. TypeScriptによる型定義
 1. ルールを逸脱したコードを自動検知
 1. ユーザ操作によるエラーログ抽出
+
+---
+
+## ES6(ES2015)によるJavaScriptコーディング
+
+--
+
+- 仕様策定中のECMAScript6を採用
+
+--
+
+  - 最終的に各種ブラウザで動作するようにトランスパイル（変換）するので、表に見えるコードは普通のJavaScript
+  - 書いてて楽しい <- ここ重要
+
+---
+
+## ES6(ES2015)によるJavaScriptコーディング
+
+- 具体的にどんなことが楽しいのか
+
+---
+
+## 関数スコープからブロックスコープへ、そして定数定義へ
+
+--
+
+```
+Before:
+var prefecture = 'Tokyo';
+var COUNTRY = 'Japan'
+```
+
+--
+
+```
+
+After:
+let prefecture = 'Tokyo'; <- ブロックスコープ内でのみ参照
+const country = 'Japan'; <- 二度と上書きできない
+```
+
+---
+
+## 連結HTMLからの解放
+
+--
+
+```
+Before:
+var callToAction  = '<p>';
+var callToAction += '<a href="#">';
+    callToAction += 'ボタンのテキスト';
+    callToAction += '</a>';
+    callToAction += '</p>';
+```
+
+---
+
+## 連結HTMLからの解放
+
+```
+After:
+let callToAction = `
+  <p>
+    <a href="#">
+      ボタンのテキスト
+    </a>
+  </p>
+`;
+```
+
+---
+
+## 連結stringからの解放
+
+```
+Before:
+var date = today.month() + '月' + today.day() + '日';
+```
+
+--
+
+```
+
+After:
+let date = `${today.month()}月${today.day()}日`;
+```
+
+---
+
+## アロー関数によるスコープ
+
+--
+
+```
+Before:
+doSomething = function(e) { return e; }
+```
+
+--
+
+```
+
+After:
+doSomething = (e) => e;
+```
+
+---
+
+## クラス、コンストラクタがフロントエンドにも
+
+--
+
+```
+class Men {
+  constructor(name) {
+    this.name = name;
+  }
+  greeting() {
+    return `私は${this.name}です`;
+  }
+}
+```
+
+---
+
+## ES6(ES2015)によるJavaScriptコーディング
+
+- その他詳しくはネットサーフィンにて。
+  - ES2015 (ES6)についてのまとめ
+  - http://qiita.com/tuno-tky/items/74ca595a9232bcbcd727
 
 ---
 
@@ -942,7 +1143,7 @@ let foo: boolean = false;
 
 ---
 
-## 型だけじゃなく、中身もあらかじめ定義しちゃおう
+## 型だけじゃなく、ついでに中身もあらかじめ定義しちゃおう
 
 --
 
@@ -1052,6 +1253,8 @@ this.role: string = 'INT';
 
 - weeklyでレポートを自動生成
 
+<!-- NOTE: for浅井さん => レポートを自動生成なんてしてないけどしてることにする。笑 -->
+
 --
 
 - 前週と比較して、
@@ -1076,9 +1279,31 @@ this.role: string = 'INT';
 - PJ内には全部で 403(-22) 個のTODOがありますよー o(^▽^)o
 ```
 
+<!-- NOTE: for 浅井さん => これもそんなマネジメントしてないけどしてることにする -->
+
 --
 
 - cf: npm gulp-todo
+
+---
+
+## それ以前に、タイポとかヒューマンエラーもある
+
+--
+
+- Sass, TypeScriptでのトランスパイルエラー -> コンソールが止まるから気づく
+
+--
+
+- Sass-lint, ES-lint, TS-lintでのワーニング -> 怖いリーダーが直せと言ってくるから気づく
+
+--
+
+- TODO, FIXMEによるタスク -> 怖いリーダーが早くやれと言ってくるから気づく
+
+--
+
+- Pull Request Test（Github）-> エラーを孕む低品質なコードはマージできない
 
 ---
 
@@ -1138,6 +1363,10 @@ this.role: string = 'INT';
 
   - 実装可能性はフロントエンドエンジニアの力量の問題であり、デザイナにフィージビリティを考えさせてはいけない。
   - デザイナも、フロントの工数や実装の複雑さを考慮することがあってはいけない。
+
+--
+
+  - もっというと、フロントエンドTOサーバー再度にも同じことが言える
 
 ---
 
