@@ -283,25 +283,10 @@ class: img-slide
 ## 技術スタック
 
 - その他サーバサイド的なものたち
-  - Java
-  - Scala
-  - Python
-  - Play Framework
-  - Slick
-  - Nginx
-  - MySQL
-  - Elasticsearch
-  - Memcached
-  - Docker
-  - Ansible
-  - SQS
-  - CloudFront
-  - Jenkins
-  - Kibana
-  - Mailgun
-  - etc...
+  - Java, Scala, Python, Play Framework
+  Slick, Nginx, MySQL, Elasticsearch, Memcached, Docker, Ansible, SQS, CloudFront, Jenkins, Kibana, Mailgun, etc...
 
-<!-- NOTE: いっぱいあるけどひとつもよくわからんという談笑スライド -->
+  <!-- !-- NOTE: いっぱいあるけどひとつもよくわからんという談笑スライド -->
 
 ---
 
