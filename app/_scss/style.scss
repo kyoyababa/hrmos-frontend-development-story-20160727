@@ -34,6 +34,12 @@ h1,h2,h3 {
     bottom: 25px;
     color: #EEEEEE;
   }
+  .remark-slide-number {
+    position: fixed;
+    top: 10px;
+    bottom: auto;
+    margin-top: 0 !important;
+  }
 }
 
 .remark-slide-content {
@@ -74,12 +80,12 @@ h1,h2,h3 {
   p > img {
     display: block;
     width: auto;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 50px);
     margin: 0 auto;
   }
 
   * + p > img {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 150px);
   }
 
   li > p > img,
@@ -122,9 +128,12 @@ h1,h2,h3 {
   pre > code {
     margin-top: 10px;
   }
+
+  pre + pre > code {
+    margin-top: 0;
+  }
 }
 
-// navigations
 .sg-navigation {
   display: none;
 
@@ -152,7 +161,7 @@ h1,h2,h3 {
 .sg-navigation-header {
   padding: 6px 8px;
   background-color: rgba(lighten(darken(#DC0000, 50%), 50%), 0.85);
-  font-size: 34px;
+  font-size: 26px;
   color: #EEEEEE;
 }
 
@@ -191,4 +200,32 @@ h1,h2,h3 {
     width: 800px;
     margin: 0 auto;
   }
+}
+
+.hljs-default .hljs {
+  padding: 0 !important;
+}
+
+.hljs-name,
+.hljs-selector-tag,
+.hljs-keyword {
+  color: lighten(red, 20%) !important;
+}
+.hljs-selector-tag {
+  font-weight: normal !important;
+}
+.hljs-attr,
+.hljs-selector-class,
+.hljs-title {
+  color: orange !important;
+}
+.hljs-string {
+  color: lighten(green, 40%) !important;
+}
+.hljs-subst {
+  color: #FFFFFF !important;
+}
+.hljs-number,
+.hljs-literal {
+  color: lighten(blue, 30%) !important;
 }

@@ -1,0 +1,1 @@
+!function(r,e){var a="index.md",i="<16:9></16:9>";remark.create({sourceUrl:a,ratio:i})}(window);

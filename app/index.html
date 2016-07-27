@@ -12,21 +12,7 @@
 </nav>
 
 <script src="./scripts/vendor/remark.min.js"></script>
-<script>
-  var aspectRatio;
-
-  if ( location.href.match(/localhost/) ) {
-    aspectRatio = '<16:9></16:9>';
-    alert(true)
-  } else {
-    aspectRatio = '<4:3></4:3>';
-  }
-
-  remark.create({
-    sourceUrl: 'index.md',
-    ratio: aspectRatio
-  });
-</script>
+<script src="./scripts/common.js"></script>
 
 </body>
 </html>
