@@ -54,7 +54,7 @@ h1, h2, h3 {
   .remark-slide-content p > img {
     display: block;
     width: auto;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 75px);
     margin: 0 auto; }
   .remark-slide-content * + p > img {
     height: calc(100vh - 150px); }
