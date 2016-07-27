@@ -54,10 +54,10 @@ h1, h2, h3 {
   .remark-slide-content p > img {
     display: block;
     width: auto;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 100px);
     margin: 0 auto; }
   .remark-slide-content * + p > img {
-    height: calc(100vh - 150px); }
+    height: calc(100vh - 175px); }
   .remark-slide-content li > p > img,
   .remark-slide-content li > img {
     width: auto;
