@@ -23,10 +23,15 @@ class: img-slide
 
 ## スケジュール
 
-<!-- TODO: 当日調整して書き換えること -->
-| 19:30 | 20:20 | 20:30 | 22:00 |
+| 19:30 | 20:15 | 20:30 | 22:00 |
 |:-----------|:-----------|:-----------|:-----------|
-| 発表開始 | 質疑応答 | ![](./images/beer.png)![](./images/sushi.png)  | 完全撤収 |
+| 第１部発表 | 第２部発表 | ![](./images/beer.png)![](./images/sushi.png)  | 完全撤収 |
+
+---
+
+# フロントエンド&lt;チーム開発 /&gt;成功の裏話
+
+![](./images/cover.png)
 
 ---
 
@@ -76,12 +81,16 @@ class: img-slide
 
 ## アジェンダ
 
-- \#1 プロダクトについて
-- \#2 フロントエンド開発のルールづくり
-- \#3 HRMOSを支える技術
-- \#4 チームマネジメント
-- \#5 質疑応答
-- \#6 ![](./images/sushi.png) ![](./images/beer.png)
+- 第１部（45mins, Kyoya BABA）
+  - \#1 プロダクトについて
+  - \#2 フロントエンド開発のルールづくり
+  - \#3 HRMOSを支える技術
+  - \#4 チームマネジメント
+  - \#5 質疑応答
+- 第２部（15mins, Masahiko ASAI）
+  - \#1 僕がHRMOSのフロントエンド開発で心がけていること
+  - \#2 質疑応答
+- ![](./images/sushi.png) ![](./images/beer.png) (90mins)
 
 ---
 
@@ -344,13 +353,11 @@ class: img-slide
 //
 ```
 
-<!-- NOTE: for浅井さん => 竹内さんの考えなのか、世間的に言われていることなのか知らないが僕は面接でこれを言われた。 -->
-
 ---
 
 ## 案１
 
-```
+```html
 <table>
   <tbody>
     <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
@@ -364,7 +371,7 @@ class: img-slide
 
 ## 案２
 
-```
+```html
 <ol>
   <li>1</li> <li>2</li> <li>3</li>
   <li>4</li> <li>5</li> <li>6</li>
@@ -376,7 +383,7 @@ class: img-slide
 
 ## 案３
 
-```
+```html
 <ol>
   <li>1</li> <li>2</li> <li>3</li>
 </ol>
@@ -392,7 +399,7 @@ class: img-slide
 
 ## 案４
 
-```
+```html
 <p>123</p>
 <p>456</p>
 <p>789</p>
@@ -439,7 +446,7 @@ class: img-slide
 
 --
 
-```
+```html
 <div>
   <div>
     <div>
@@ -591,7 +598,7 @@ class: img-slide
 
 ## 基礎構造・部分構造の例：
 
-```
+```html
 <section>
   <h2>見出し</h2>
   <p>見出しを補足するテキスト</p>
@@ -608,8 +615,8 @@ class: img-slide
 
 ## 基礎構造・部分構造の例：
 
-```
-<section class="sg-container"> <- 基礎となるcontainer
+```html
+<section class="sg-container"> <!-- 基礎となるcontainer -->
   <h2>見出し</h2>
   <p>見出しを補足するテキスト</p>
   <div>
@@ -625,20 +632,20 @@ class: img-slide
 
 ## 基礎構造・部分構造の例：
 
-```
+```css
 .sg-container { }
 ```
 
 --
 
-```
+```css
 
 .sg-container + * { }
 ```
 
 --
 
-```
+```css
 
 .sg-container > h2 { }
 ```
@@ -647,12 +654,12 @@ class: img-slide
 
 ## 基礎構造・部分構造の例：
 
-```
+```html
 <section class="sg-container">
   <h2>見出し</h2>
   <p>見出しを補足するテキスト</p>
   <div>
-    <figure class="pg-inner-images"> <- 部分追加した構造
+    <figure class="pg-inner-images"> <!-- 部分追加した構造 -->
       <img src="hoge.jpg">
     </figure>
     <p>本文テキスト</p>
@@ -664,7 +671,7 @@ class: img-slide
 
 ## 基礎構造・部分構造の例：
 
-```
+```css
 .pg-inner-images { }
 
 .pg-inner-images > img { }
@@ -672,7 +679,7 @@ class: img-slide
 
 --
 
-```
+```css
 
 .sg-container .pg-inner-images { }
 ```
@@ -683,7 +690,7 @@ class: img-slide
 
 --
 
-```
+```css
 .sg-container p { }
 
 .sg-container > p { }
@@ -697,13 +704,14 @@ class: img-slide
 
 ## セレクタの構造化？
 
-```
+```html
 <ul>
   <li class="sg-item"></li>
   <li class="sg-item"></li>
   <li class="sg-item"></li>
 </ul>
-
+```
+```css
 .sg-item { }
 ```
 
@@ -711,15 +719,17 @@ class: img-slide
 
 ## セレクタの構造化？
 
-```
+```html
 <ul class="sg-item-list">
   <li></li>
   <li></li>
   <li></li>
 </ul>
-
+```
+```css
 .sg-item-list > li { }
-
+```
+```
 ^ すっきりした！
 ```
 
@@ -729,7 +739,7 @@ class: img-slide
 
 ## セレクタの構造化？
 
-```
+```html
 <div>
   <p class="m_05"></p>
   <p class="m_05"></p>
@@ -753,7 +763,7 @@ class: img-slide
 
 --
 
-```
+```html
 <ul>
   <li class="sg-item-normal"></li>
   <li class="sg-item-active"></li>
@@ -765,7 +775,7 @@ class: img-slide
 
 ## 簡潔な状態定義？
 
-```
+```html
 <ul class="sg-item-list">
   <li></li>
   <li class="active"></li>
@@ -775,7 +785,7 @@ class: img-slide
 
 --
 
-```
+```css
 
 .sg-item-list > li { }
 .sg-item-list > li.active { }
@@ -788,13 +798,13 @@ class: img-slide
 
 --
 
-```
+```html
 <button id="jsi-menu-trigger">MENU</button>
 ```
 
 --
 
-```
+```html
 
 <button class="jsc-cta-trigger">問い合わせ</button>
 ```
@@ -835,8 +845,6 @@ class: img-slide
 
 ---
 
-<!-- NOTE: ここから浅井さんにバトンタッチかなあ？ -->
-
 ## TODOといえば
 
 --
@@ -851,7 +859,7 @@ HRMOSの半分はTODOでできています
 
 ## こんなのとか
 
-```
+```html
 <!-- TODO(名前): あとでここをこうする -->
 ```
 
@@ -859,7 +867,7 @@ HRMOSの半分はTODOでできています
 
 ## こんなのとか
 
-```
+```css
 /* NOTE(名前): ここの数字を変えるときはこうしてね */
 ```
 
@@ -867,7 +875,7 @@ HRMOSの半分はTODOでできています
 
 ## こんなのとか
 
-```
+```javascript
 // FIXME(名前): やり方わかんないから
 // 誰かここをこうしてほしいなあ(´･_･`)
 ```
@@ -893,13 +901,13 @@ HRMOSの半分はTODOでできています
 
 ## コードを書く = 仕様書を作る
 
-```
-// # ボタン
-// ## 優先度により補助クラスを指定
-// '''
-// <a href="#" class="sg-button">通常のボタン</a>
-// <a href="#" class="sg-button primary">プライマリアクション</a>
-// '''
+```css
+/* # ボタン
+ * ## 優先度により補助クラスを指定
+ * '''
+ * <a href="#" class="sg-button">通常のボタン</a>
+ * <a href="#" class="sg-button primary">プライマリアクション</a>
+*/ '''
 .sg-button {
   ...
   &.primary {
@@ -920,7 +928,7 @@ HRMOSの半分はTODOでできています
 
 - AngularJSのカスタムディレクティブ
 
-```
+```javascript
 /**
  * @ngdoc directive
  * @example
@@ -986,17 +994,17 @@ quo: http://qiita.com/Quramy/items/42418def7c8e6544a415
 
 --
 
-```
-Before:
+```javascript
+// Before:
 var prefecture = 'Tokyo';
 var COUNTRY = 'Japan'
 ```
 
 --
 
-```
+```javascript
 
-After:
+// After:
 let prefecture = 'Tokyo'; <- ブロックスコープ内でのみ参照
 const country = 'Japan'; <- 二度と上書きできない
 ```
@@ -1007,8 +1015,8 @@ const country = 'Japan'; <- 二度と上書きできない
 
 --
 
-```
-Before:
+```javascript
+// Before:
 var callToAction  = '<p>';
 var callToAction += '<a href="#">';
     callToAction += 'ボタンのテキスト';
@@ -1020,8 +1028,8 @@ var callToAction += '<a href="#">';
 
 ## 連結HTMLからの解放
 
-```
-After:
+```javascript
+// After:
 let callToAction = `
   <p>
     <a href="#">
@@ -1035,16 +1043,16 @@ let callToAction = `
 
 ## 連結stringからの解放
 
-```
-Before:
+```javascript
+// Before:
 var date = today.month() + '月' + today.day() + '日';
 ```
 
 --
 
-```
+```javascript
 
-After:
+// After:
 let date = `${today.month()}月${today.day()}日`;
 ```
 
@@ -1054,16 +1062,16 @@ let date = `${today.month()}月${today.day()}日`;
 
 --
 
-```
-Before:
+```javascript
+// Before:
 doSomething = function(e) { return e; }
 ```
 
 --
 
-```
+```javascript
 
-After:
+// After:
 doSomething = (e) => e;
 ```
 
@@ -1073,7 +1081,7 @@ doSomething = (e) => e;
 
 --
 
-```
+```javascript
 class Men {
   constructor(name) {
     this.name = name;
@@ -1098,7 +1106,7 @@ class Men {
 
 --
 
-```
+```javascript
 // 普通のJavaScript
 var foo = 5;
 var foo = 'hogehoge';
@@ -1109,7 +1117,7 @@ var foo = false;
 
 ## TypeScriptによる型定義
 
-```
+```javascript
 // TypeScriptによる型定義 (+ ES6)
 let foo: number  = 5;
 let foo: string  = 'hogehoge';
@@ -1150,7 +1158,7 @@ let foo: boolean = false;
 
 --
 
-```
+```javascript
 const Constants = {
   SERVICE_NAME = 'HRMOS[ハーモス]';
   COMPANY_NAME = '株式会社ビズリーチ';
@@ -1162,7 +1170,7 @@ const Constants = {
 
 ## constantsによる定数の定義（例）
 
-```
+```javascript
 const Constants = {
   SERVICE_NAME = 'HRMOS[ハーモス]';
   COMPANY_NAME = '株式会社ビズリーチ';
@@ -1178,7 +1186,7 @@ const Constants = {
 
 --
 
-```
+```javascript
 class Roles {
   General = { code: 'GEN', name: '一般社員', limited: false };
   Interviewer = { code: 'INT', name: '面接官', limited: false };
@@ -1191,7 +1199,7 @@ class Roles {
 
 ## フロントエンドで語彙がバラつかない！
 
-```
+```html
 <p>{{ $enums.roles.Interviewer.name }}</p>
 
  => <p>面接官</p>
@@ -1201,7 +1209,7 @@ class Roles {
 
 ## サーバサイドから受け取ったコードがそのまま使える！
 
-```
+```javascript
 this.role: string = 'INT';
 
 ↑ こんなデータが渡されてきたら...
@@ -1209,7 +1217,7 @@ this.role: string = 'INT';
 
 --
 
-```
+```html
 
 <p>あなたの権限は{{ $enums.roles.valueOf(this.role).name }}です<p>
 
@@ -1239,8 +1247,6 @@ this.role: string = 'INT';
 
 - weeklyでレポートを自動生成
 
-<!-- NOTE: for浅井さん => レポートを自動生成なんてしてないけどしてることにする。笑 -->
-
 --
 
 - 前週と比較して、
@@ -1264,8 +1270,6 @@ this.role: string = 'INT';
 - BさんはTODOが 39(-12) 個ありますよー o(^▽^)o
 - PJ内には全部で 403(-22) 個のTODOがありますよー o(^▽^)o
 ```
-
-<!-- NOTE: for 浅井さん => これもそんなマネジメントしてないけどしてることにする -->
 
 --
 
