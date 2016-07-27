@@ -1,38 +1,3 @@
-
-class: center, middle
-
-# *intentionally left blank*
-
----
-
-class: img-slide
-
-![](http://dummyimage.com/1200x900/000/FFF)
-
----
-
-## wi-fi
-
-| SSID | Password |
-|:-----------|:-----------|
-| BIZREACH_GUEST | iwilljoinbizreach |
-
-## Twitter Hash Tag
-
-\#dcubeio
-
-## お手洗い
-
-後ろの左側へ。
-
-## スケジュール
-
-| 19:30 | 20:15 | 20:30 | 22:00 |
-|:-----------|:-----------|:-----------|:-----------|
-| 第１部発表 | 第２部発表 | ![](./images/beer.png)![](./images/sushi.png)  | 完全撤収 |
-
----
-
 # フロントエンド&lt;チーム開発 /&gt;成功の裏話
 
 ![](./images/cover.png)
@@ -1345,7 +1310,7 @@ this.role: string = 'INT';
 
 --
 
-  - もっというと、フロントエンドTOサーバー再度にも同じことが言える
+  - もっというと、フロントエンドTOサーバーサイドにも同じことが言える
 
 ---
 
@@ -1416,9 +1381,3 @@ this.role: string = 'INT';
 - 懇親会について
 
 ![](./images/event.jpg)
-
----
-
-class: center, middle
-
-# *intentionally left blank*
