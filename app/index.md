@@ -17,6 +17,10 @@ class: img-slide
 |:-----------|:-----------|
 | BIZREACH_GUEST | iwilljoinbizreach |
 
+## Twitter Hash Tag
+
+\#dcubeio
+
 ## お手洗い
 
 後ろの左側へ。
